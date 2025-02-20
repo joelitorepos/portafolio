@@ -1,0 +1,64 @@
+/* QUITANDO PROPIEDADES POR DEFECTO */
+* {
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+}
+
+/* -------- HEADER SECTION -------- */
+
+.header {
+    display: flex;
+    justify-content: center;
+    min-height: 10dvh;
+    background-color: #333;
+}
+
+.self-name__wrapper{
+    display: none;
+    align-items: center;
+    margin-left: 50px;
+}
+
+.header__self-name{
+    color: #fff;
+}
+
+.header__nav-list {
+    display: flex;
+    width: clamp(500px,40%,700px);
+    justify-content: space-evenly;
+}
+
+.header__nav-item{
+    min-height: 60px;
+    min-width: 60px;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+}
+
+.header__nav-image{
+    max-height: 30px;
+}
+
+/* -------- HEADER ENDS -------- */
+
+/* -------- MEDIA QUERIES HEADER -------- */
+
+@media screen and (min-width:700px){
+    .self-name__wrapper {
+        display: grid;
+    }
+    .header {
+        justify-content: space-between;
+    }
+}
