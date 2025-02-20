@@ -13,7 +13,7 @@ body {
     margin: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, h4, p {
     margin: 0;
 }
 
@@ -94,6 +94,72 @@ h1 {
 .profile__skills{
     background-color: #48e;
     min-height: 90dvh;
+}
+
+.profile__img-logo{
+    height: 75px;
+}
+
+.profile__skill-description__wrapper{
+    min-height: 40dvh;
+    padding: 20px;
+}
+
+.profile__skill-paragraph{
+    margin-top: 25px;
+}
+
+.profile__skill-list__wrapper__wrapper {
+    display: flex;
+    position: relative; 
+    width: 100%; 
+    max-height: 100%;
+    height: 50dvh; 
+    overflow: hidden; 
+}
+
+
+.profile__skill-list__wrapper {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 90%; 
+    height: 90%;
+}
+
+.form__slider-button{
+    position: absolute;
+    right: 0;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    height: 100%;
+    width: 4dvw;
+}
+
+.checkbox-hidden{
+    display: none;
+}
+
+.list-1{
+    top: 0;
+    left: 0;
+}
+
+.list-2{
+    top: 0;
+    left: 700px;
+}
+
+.profile__skill-list{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    justify-content: center;
+}
+
+.profile__skill{
+    text-align: center;
 }
 
 
