@@ -52,6 +52,41 @@ body {
 
 /* -------- HEADER ENDS -------- */
 
+/* -------- MAIN SECTION -------- */
+
+.profile{
+    container-name: profile;
+    container-type: inline-size;
+    margin: 10px;
+}
+
+.profile__wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 90dvh;
+    background-color: #48e3;
+}
+
+.profile__self-information{
+    min-height: 90dvh;
+    background-color: #444;
+}
+
+h1 {
+    color: #fff;
+}
+
+.profile__skills{
+    background-color: #48e;
+    min-height: 90dvh;
+}
+
+.profile__img-container{
+    min-height: 40%;
+    background-color: #b44;
+}
+
+
 /* -------- MEDIA QUERIES HEADER -------- */
 
 @media screen and (min-width:700px){
@@ -60,5 +95,19 @@ body {
     }
     .header {
         justify-content: space-between;
+    }
+}
+
+/* -------- MEDIA QUERIES MAIN -------- */
+
+@container profile (min-width:850px){
+    .profile__wrapper{
+        flex-direction: row;
+    }
+    .profile__self-information{
+        flex: 2;
+    }
+    .profile__skills{
+        flex: 3;
     }
 }
