@@ -228,14 +228,57 @@ h1 {
 /* -------- EXERCISES AND FORM SECTION -------- */
 
 .form-and-exercises__wrapper{
-    min-height: 70dvh;
+    min-height: 75dvh;
     display: flex;
     flex-direction: column;
+    width: 98%;
+    margin: auto;
+    background-color: #e4e6;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* -------- ONLY EXERCISES SECTION -------- */
 
+.exercises{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex: 1;
+    background-color: #1e2a38;
+    color: #fff;
+}
 
+.exercises__image{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+}
+
+.exercises__button{
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #48e;
+    height: 50px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.exercises__paragraph{
+    padding: 20px;
+    font-size: 25px;
+}
+
+/* -------- ONLY FORM SECTION -------- */
+
+.form{
+    flex: 1;
+    background-color: #b44;
+    min-height: 75dvh;
+}
 
 /* -------- MEDIA QUERIES HEADER -------- */
 
@@ -262,7 +305,7 @@ h1 {
     }
 }
 
-/* -------- PROJECT QUERIES -------- */
+/* -------- MEDIA QUERIEES PROJECT -------- */
 
 @media screen and (min-width: 700px) {
     .portfolio__pojects-wrapper{
@@ -270,5 +313,11 @@ h1 {
     }
     .portfolio__project-container{
         width: clamp(200px,95%,400px);
+    }
+}
+
+@media screen and (min-width:700px){
+    .form-and-exercises__wrapper{
+        flex-direction: row;
     }
 }
