@@ -29,8 +29,6 @@ h1, h2, h3, h4, p {
     justify-content: center;
     min-height: 10dvh;
     background-color: #333;
-    position: sticky;
-    top: 0;
 }
 
 .self-name__wrapper{
@@ -114,7 +112,7 @@ h1 {
     padding: 20px;
 }
 
-.profile__skill-paragraph{
+.profile__skill-description-paragraph{
     margin-top: 25px;
 }
 
@@ -159,14 +157,16 @@ h1 {
 
 .list-2{
     top: 0;
-    left: 800px;
+    left: 1200px;
 }
 
 .profile__skill-list{
+    margin: 20px;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
     justify-content: center;
+    gap: 40px;
 }
 
 .profile__skill{
@@ -338,6 +338,8 @@ h1 {
     }
     .header {
         justify-content: space-between;
+        position: sticky;
+        top: 0;
     }
 }
 
