@@ -29,6 +29,8 @@ h1, h2, h3, h4, p {
     justify-content: center;
     min-height: 10dvh;
     background-color: #333;
+    position: sticky;
+    top: 0;
 }
 
 .self-name__wrapper{
@@ -274,11 +276,59 @@ h1 {
 
 /* -------- ONLY FORM SECTION -------- */
 
-.form{
+
+.form {
     flex: 1;
-    background-color: #b44;
-    min-height: 75dvh;
+    background-color: #b444;
+    min-height: 60dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
 }
+
+.form__title {
+    font-size: 2rem;
+}
+
+.form__form {
+    padding: 13px;
+    max-width: 700px;
+    width: 100%;
+    display: grid;
+    margin-bottom: 20px;
+}
+
+.form__label {
+    display: block;
+}
+
+.form__input-container {
+    padding: 5px;
+}
+
+.form__input-container :is(input,textarea) {
+    width: 100%;
+    padding: 6px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0 8px #0003;
+    border-radius: 4px;
+}
+
+.form__input-container textarea {
+    resize: none;
+    min-height: 9rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+.form__input-container input[type="submit"] {
+    color: #fff;
+    background-color: #18233f;
+}
+
 
 /* -------- MEDIA QUERIES HEADER -------- */
 
