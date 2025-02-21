@@ -11,6 +11,7 @@ ul {
 
 body {
     margin: 0;
+    background-color: #48e4;
 }
 
 h1, h2, h3, h4, p {
@@ -71,6 +72,8 @@ h1, h2, h3, h4, p {
     background-color: #48e3;
 }
 
+/* -------- SKILLS INFORMATION -------- */
+
 .profile__self-information{
     display: flex;
     flex-direction: column;
@@ -108,6 +111,8 @@ h1 {
 .profile__skill-paragraph{
     margin-top: 25px;
 }
+
+/* -------- SKILL ICONS -------- */
 
 .profile__skill-list__wrapper__wrapper {
     display: flex;
@@ -148,7 +153,7 @@ h1 {
 
 .list-2{
     top: 0;
-    left: 700px;
+    left: 800px;
 }
 
 .profile__skill-list{
@@ -161,7 +166,48 @@ h1 {
 .profile__skill{
     text-align: center;
 }
+/* -------- MAIN ENDS -------- */
 
+/* -------- PROJECTS SECTION -------- */
+
+.portfolio{
+    container-name: portfolio;
+    container-type: inline-size;
+    min-height: 70dvh;
+    background-color: #1e2a38;
+}
+
+.portfolio__title-container{
+    min-height: 10dvh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 100%;
+}
+
+.portfolio__title{
+    font-size: 60px;
+    color: #fff;
+}
+
+.portfolio__pojects-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 10px;
+    gap: 25px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.portfolio__project-container{
+    min-height: 300px;
+    width: 100%;
+    background-color: #84e;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    border-radius: 15px;
+}
 
 /* -------- MEDIA QUERIES HEADER -------- */
 
@@ -176,7 +222,7 @@ h1 {
 
 /* -------- MEDIA QUERIES MAIN -------- */
 
-@container profile (min-width:850px){
+@container profile (min-width:800px){
     .profile__wrapper{
         flex-direction: row;
     }
@@ -185,5 +231,16 @@ h1 {
     }
     .profile__skills{
         flex: 3;
+    }
+}
+
+/* -------- PROJECT QUERIES -------- */
+
+@media screen and (min-width: 700px) {
+    .portfolio__pojects-wrapper{
+        grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    }
+    .portfolio__project-container{
+        width: clamp(200px,95%,400px);
     }
 }
