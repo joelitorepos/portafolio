@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+a{
+    text-decoration: none;
+}
+
 ul {
     list-style: none;
     padding: 0;
@@ -207,7 +211,31 @@ h1 {
     align-content: center;
     text-align: center;
     border-radius: 15px;
+    overflow: hidden;
 }
+
+.portfolio__project{
+    display: grid;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: #e48;
+    color: #fff;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+/* -------- EXERCISES AND FORM SECTION -------- */
+
+.form-and-exercises__wrapper{
+    min-height: 70dvh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* -------- ONLY EXERCISES SECTION -------- */
+
+
 
 /* -------- MEDIA QUERIES HEADER -------- */
 
