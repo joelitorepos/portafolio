@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Victor Joel">
+    <title>aside navbar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+    <body>
+        <aside class="sidebar">
+            <form class="sidebar__form">
+                <input type="checkbox" id="open-menu">
+                <label class="material-symbols-outlined" for="open-menu">keyboard_double_arrow_left</label>
+                <label class="material-symbols-outlined menu--abierto" for="open-menu">keyboard_double_arrow_right</label>
+            </form>
+            <picture class="sidebar__picture">
+                <source srcset="../imagenes proyecto/logo-aside-pequeño.webp" media="(max-width:700px)">
+                <img src="../imagenes proyecto/logo-aside.webp" alt="">
+            </picture>
+            <nav class="sidebar__nav"> 
+                <ul>
+                    <li class="sidebar__item">
+                        <span class="material-symbols-outlined">notifications</span>
+                        <a href="#">notificaciones</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <span class="material-symbols-outlined">mail</span>
+                        <a href="#">mensasjes</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <a href="#">productos</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <span class="material-symbols-outlined">account_balance</span>
+                        <a href="#">cuenta</a>
+                    </li>
+                    <li class="sidebar__item">
+                        <span class="material-symbols-outlined">settings</span>
+                        <a href="#">ajustes</a>
+                    </li>
+                </ul>
+            </nav>
+            <ul class="sidebar__profile">
+                <li class="sidebar__item item--profile">
+                    <img src="../imagenes proyecto/persona.jpg" alt="persona">
+                    <span class="profile-option">profile</span>
+                </li>
+                <li class="sidebar__item">
+                    <span class="material-symbols-outlined">logout</span>
+                    <a href="#">logout</a>
+                </li>
+            </ul>
+        </aside>
+    </body>
+</html>

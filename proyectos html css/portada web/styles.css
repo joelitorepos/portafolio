@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    --color-fondo: color-mix(in srgb, #84e 50%, #fff 5%);
+    --color-sidebar: #F0F0F0;
+    --color-aside: #8a2be2;
+    --color-oscuro: #6A0DAD;
+    --color-mas-oscuro: #4B0082;
+    --color-contraste: #98FB98;
+    --color-celeste-claro: #bceeff;
+    --color-celeste-medio: #8fe3ff;
+    background-image: url(../imagenes\ proyecto/fondo-black-and-white.gif);
+    height: 200dvh;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    mix-blend-mode: screen;
+}
+
+.text-container {
+    min-height: 100dvh;
+    position: fixed;
+    top: 0;
+    display: flex;
+    font-size: clamp(1rem,7dvw,10rem);
+    color: #666;
+    font-weight: 700;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    padding: 4dvw;
+    animation: aparecer-texto both;
+    animation-timeline: scroll();
+    animation-range: cover 20%;
+}
+
+.left-text {
+    color: var(--color-fondo);
+}
+
+img {
+    filter: grayscale();
+    position: fixed;
+    top: 0;
+    animation: aparecer both;
+    animation-timeline: scroll();
+    max-height: 100dvh;
+    mix-blend-mode: darken;
+}
+
+@keyframes aparecer {
+    0% {
+        opacity: 0;
+        filter: grayscale() drop-shadow(0 0 15px #0006);
+        translate: 0 -20%;
+        scale: .7;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+
+@keyframes aparecer-texto {
+    0% {
+        opacity: 0;
+        translate: 0 20%;
+        scale: 2;
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0 0;
+        scale: 1;
+    }
+}

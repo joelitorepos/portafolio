@@ -1,0 +1,388 @@
+/*-------- ATRIBUTOS POR DEFECTO --------*/
+
+* {
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: #e2eaff;
+    color: #101632dd;
+    scroll-behavior: smooth;
+}
+
+body, div, ul, nav, header, footer, a, li, label {
+    padding: 0;
+    margin: 0;
+}
+
+
+/*-------- HEADER SECTION --------*/
+
+.header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 10;
+    font-size: 1rem;
+    color: #48e;
+}
+
+.header__open-nav-button {
+    color: #48e;
+    font-size: 3rem;
+    font-weight: 600;
+    position: absolute;
+    right: 10px;
+}
+
+.header__checkbox {
+    display: none;
+}
+
+.header__nav {
+    display: none;
+    background-color: #fff;
+    position: absolute;
+    height: 100dvh;
+    width: 100dvw;
+    top: 0;
+    z-index: -1;
+}
+
+.header__nav-list {
+    display: flex;
+    flex-direction: column;
+    height: 40dvh;
+    margin: auto;
+    justify-content: space-evenly;
+}
+
+.header__checkbox:checked ~ .header__nav {
+    display: flex;
+}
+
+.header__logo {
+    max-width: 100%;
+    width: 50px;
+    margin: 10px 20px;
+}
+
+.header__nav-item a {
+    color: inherit;
+}
+
+.header__nav-item a:is(:hover,:active) {
+    color: #24b;
+}
+
+/*-------- HEADER QUERIES --------*/
+
+@media screen and (min-width: 600px) {
+
+    .header {
+        animation: adaptar-nav both;
+        animation-timeline: scroll();
+        position: sticky;
+        top: 0;
+        animation-range: 20px 150px;
+    }
+
+    .header__open-nav-button {
+        display: none;
+    }
+
+    .header__nav {
+        display: block;
+        position: static;
+        z-index: 10;
+        height: 100%;
+        background-color: initial;
+    }
+
+    .header__nav-list {
+        flex-direction: row;
+        height: 100%;
+    }
+}
+
+/*-------- HEADER ENDS --------*/
+
+
+/*-------- PROFILE SECTION --------*/
+
+.profile {
+    container-name: profile;
+    container-type: inline-size;
+    animation: aparecer 2.5s -.6s both;
+}
+
+.profile__wraper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: auto;
+    background-color: #fff;
+}
+
+.profile__img-container {
+    max-height: 300px;
+    min-width: 40dvw;
+    overflow: hidden;
+    position: relative;
+}
+
+.profile__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -500px;
+    height: 700px;
+}
+
+.profile__data-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+h1, h2, h3 {
+    color: #008;
+}
+
+.profile__skill-list {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    justify-content: center;
+}
+
+.profile__skill {
+    text-align: center;
+}
+
+.profile__skill p {
+    text-align: start;
+    word-wrap: pretty;
+}
+
+.profile__img-logo {
+    max-width: 100%;
+    height: 75px;
+}
+
+/*-------- PROFILE QUERIES --------*/
+
+@container profile (min-width:700px) {
+    .profile__wraper {
+        flex-direction: row;
+        margin: 20px;
+    }
+
+    .profile__img-container {
+        max-height: initial;
+    }
+}
+
+/*-------- PROFILE ENDS --------*/
+
+
+/*-------- PORTFOLIO SECTION --------*/
+
+.portfolio {
+    background-color: #18233f;
+    min-height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    container-name: portfolio;
+    container-type: inline-size;
+}
+
+.portfolio__title {
+    font-size: 2.5rem;
+}
+
+.portfolio h2 {
+    color: #fff;
+}
+
+.portfolio__project-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1350px;
+    width: 100%;
+    height: 30rem;
+    gap: 12px;
+    padding: 12px;
+}
+
+.portfolio__project {
+    background-image: linear-gradient(#0006, #0006), url(../../EVANGELIONBESTANIME.jpg);
+    background-position: center;
+    background-size: cover;
+    display: grid;
+    place-content: center;
+    min-width: 300px;
+    border-radius: 13px;
+    animation: aparecer both;
+    animation-timeline: view();
+    animation-range: contain -20% cover 50%;
+}
+
+.portfolio__project:hover {
+    opacity: 0.7;
+    outline: 2px solid #fff6;
+}
+
+/*-------- PORTFOLIO QUERIES --------*/
+
+@container portfolio (min-width:700px) {
+    .portfolio__project-container {
+        grid-template-columns: repeat(auto-fill,minmax(420px,1fr));
+    }
+
+    .portfolio__project:first-child {
+        grid-column: span 2;
+        grid-row: span 2;
+    }
+
+    .portfolio__project:last-child{
+        grid-column: span 2;
+    }
+}
+
+@container portfolio (min-width:1308px) {
+    .portfolio__project:last-child{
+        grid-column: span 1;
+    }
+}
+
+/*-------- PORTFOLIO ENDS --------*/
+
+
+/*-------- CONTACT SECTION --------*/
+
+.form {
+    min-height: 60dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    container-name: form;
+    container-type: inline-size;
+}
+
+.form__title {
+    font-size: 2rem;
+}
+
+.form__form {
+    flex: 1;
+    padding: 13px;
+    max-width: 700px;
+    width: 100%;
+    display: grid;
+    background-image: radial-gradient(#18233f11,#18233f44);
+    border-radius: 16px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+}
+
+.form__input-container {
+    padding: 5px;
+}
+
+.form__input-container :is(input,textarea) {
+    width: 100%;
+    padding: 6px;
+    font-size: 16px;
+    border: none;
+    box-shadow: 0 0 8px #0003;
+    border-radius: 4px;
+}
+
+.form__input-container textarea {
+    resize: none;
+    min-height: 9rem;
+    font-family: inherit;
+    font-size: 1.2rem;
+}
+
+.form__input-container input[type="submit"] {
+    color: #fff;
+    background-color: #18233f;
+}
+
+@container form (min-width:700px) {
+    .form__form {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas: 
+        "name lastname"
+        "email email"
+        "mensage mensage"
+        "submit submit";
+    }
+    
+    .form__input-container:first-child {
+        grid-area: name;
+    }
+    .form__input-container:nth-child(2) {
+        grid-area: lastname;
+    }
+    .form__input-container:nth-child(3) {
+        grid-area: email;
+    }
+    .form__input-container:nth-child(4) {
+        grid-area: mensage;
+    }
+    .form__input-container:last-child {
+        grid-area: submit;
+    }
+}
+
+/*-------- FOOTER SECTION  --------*/
+
+footer {
+    background-color: #18233f;
+    text-align: center;
+    padding: 15px;
+    color: #fff;
+    font-size: 1.2rem;
+}
+
+/*-------- ANIMATIONS  --------*/
+
+@keyframes adaptar-nav {
+    from {
+        background-color: #fff;
+    }
+
+    to {
+        background-color: #18233f66;
+        color: #fff;
+    }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
