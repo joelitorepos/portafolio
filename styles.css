@@ -22,6 +22,10 @@ h1, h2, h3, h4, p {
     margin: 0;
 }
 
+p {
+    text-wrap: pretty;
+}
+
 /* -------- HEADER SECTION -------- */
 
 .header {
@@ -72,7 +76,7 @@ h1, h2, h3, h4, p {
 .profile__wrapper{
     display: flex;
     flex-direction: column;
-    min-height: 90dvh;
+    min-height: 99dvh;
     background-color: #48e3;
 }
 
@@ -81,26 +85,34 @@ h1, h2, h3, h4, p {
 .profile__self-information{
     display: flex;
     flex-direction: column;
-    min-height: 90dvh;
+    min-height: 50dvh;
     background-color: #444;
 }
 
 .profile__img-container{
+    display: grid;
+    justify-content: center;
+    align-content: center;
     min-height: 37dvh;
     background-color: #b44;
 }
 
 .profile__autodescription{
-    height: 33dvh;
-}
-
-h1 {
+    padding: 35px;
+    min-height: 100px;
     color: #fff;
 }
 
+.profile__autodescription-title{
+    margin-bottom: 30px;
+}
+
+
+/* -------- AUTODESCRIPTION SECTION -------- */
+
 .profile__skills{
     background-color: #48e;
-    min-height: 90dvh;
+    min-height: 180dvh;
 }
 
 .profile__img-logo{
@@ -108,7 +120,7 @@ h1 {
 }
 
 .profile__skill-description__wrapper{
-    min-height: 40dvh;
+    min-height: 20dvh;
     padding: 20px;
 }
 
@@ -123,7 +135,7 @@ h1 {
     position: relative; 
     width: 100%; 
     max-height: 100%;
-    height: 50dvh; 
+    height: 140dvh; 
     overflow: hidden; 
 }
 
@@ -132,8 +144,8 @@ h1 {
     position: absolute; 
     top: 0;
     left: 0;
-    width: 90%; 
-    height: 90%;
+    width: 100%; 
+    height: 100%;
 }
 
 .form__slider-button{
@@ -160,18 +172,42 @@ h1 {
     left: 1200px;
 }
 
+/* DROP-DOWN MENU */
+
 .profile__skill-list{
-    margin: 20px;
+    margin: 5px;
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     justify-content: center;
-    gap: 40px;
+    gap: 5px;
 }
 
 .profile__skill{
-    text-align: center;
+    min-height: 220px;
 }
+
+.profile__skill-label{
+    display: block;
+    text-align: center;
+    position: relative;
+    max-height: 100px;
+    overflow: hidden;
+}
+
+.profile__skill:hover h3, .profile__skill:hover img{
+    opacity: .7;
+    cursor: pointer;
+}
+
+.profile__skill-paragraph{
+    text-align: left;
+}
+
+.profile__skill-label:has(input[type="checkbox"]:checked){
+    max-height: 400px;
+}
+
 /* -------- MAIN ENDS -------- */
 
 /* -------- PROJECTS SECTION -------- */
@@ -199,7 +235,7 @@ h1 {
 .portfolio__pojects-wrapper{
     display: grid;
     grid-template-columns: 1fr;
-    margin: 10px;
+    margin: 25px;
     gap: 25px;
     justify-content: center;
     justify-items: center;
@@ -225,6 +261,10 @@ h1 {
     color: #fff;
     font-weight: 500;
     font-size: 25px;
+}
+
+.portfolio__project:hover{
+    opacity: .7;
 }
 
 /* -------- EXERCISES AND FORM SECTION -------- */
@@ -273,6 +313,8 @@ h1 {
     padding: 20px;
     font-size: 25px;
 }
+
+/* -------- EXERSICES SECTION ENDS -------- */
 
 /* -------- ONLY FORM SECTION -------- */
 
@@ -329,6 +371,9 @@ h1 {
     background-color: #18233f;
 }
 
+/* -------- FORM SECTION ENDS -------- */
+
+/* -------- MAIN SECTION ANIMATIONS --------*/
 
 /* -------- MEDIA QUERIES HEADER -------- */
 
@@ -340,14 +385,16 @@ h1 {
         justify-content: space-between;
         position: sticky;
         top: 0;
+        z-index: 10;
     }
 }
 
 /* -------- MEDIA QUERIES MAIN -------- */
 
-@container profile (min-width:800px){
+@container profile (min-width:850px){
     .profile__wrapper{
         flex-direction: row;
+        min-height: 90dvh;
     }
     .profile__self-information{
         flex: 2;
@@ -357,11 +404,22 @@ h1 {
     }
 }
 
+@media screen and (min-width:525px){
+    .profile__skills{
+        min-height: 90dvh;
+    }
+    .profile__skill-list__wrapper__wrapper {
+        height: 70dvh; 
+    }
+    
+}
+
 /* -------- MEDIA QUERIEES PROJECT -------- */
 
 @media screen and (min-width: 700px) {
     .portfolio__pojects-wrapper{
         grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+        margin: 5px;
     }
     .portfolio__project-container{
         width: clamp(200px,95%,400px);
