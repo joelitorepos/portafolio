@@ -228,7 +228,7 @@ h1, h2, h3 {
 }
 
 .portfolio__project {
-    background-image: linear-gradient(#0006, #0006), url(../../EVANGELIONBESTANIME.jpg);
+    background-image: linear-gradient(#0006, #0006), url(imagenes/EVANGELIONBESTANIME.jpg);
     background-position: center;
     background-size: cover;
     display: grid;

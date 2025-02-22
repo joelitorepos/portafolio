@@ -12,7 +12,7 @@ body {
     --color-contraste: #98FB98;
     --color-celeste-claro: #bceeff;
     --color-celeste-medio: #8fe3ff;
-    background-image: url(../imagenes\ proyecto/fondo-black-and-white.gif);
+    background-image: url(imagenes\ proyecto/fondo-black-and-white.gif);
     height: 200dvh;
     background-size: cover;
     background-position: center;
