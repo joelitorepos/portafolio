@@ -22,6 +22,7 @@ body {
     --color-negro: #111;
     --color-fondo-claro: #a87fcf55;
     --color-fondo: color-mix(in srgb, #84e 50%, #fff 5%);
+    --color-lila-claro: #D8BFD8;
     --color-azul: #48e4;
     --color-aside: #8a2be2;
     --color-oscuro: #34495e ;
@@ -75,6 +76,16 @@ p {
     max-height: 45px;
 }
 
+.google-icon{
+    width: 50px;
+    height: 70px;
+    border-radius: 6px;
+}
+
+.github-icon{
+    border-radius: 7px;
+}
+
 /* -------- HEADER ENDS -------- */
 
 /* -------- MAIN SECTION -------- */
@@ -99,7 +110,7 @@ p {
 .profile__self-information{
     display: flex;
     flex-direction: column;
-    min-height: 50dvh;
+    min-height: 30dvh;
     background-color: var(--color-oscuro);
     color: var(--color-gris-claro);
 }
@@ -113,7 +124,7 @@ p {
 }
 
 .profile__autodescription{
-    padding: 35px;
+    padding: 20px;
     min-height: 100px;
 }
 
@@ -135,7 +146,7 @@ p {
 }
 
 .profile__skill-description__wrapper{
-    min-height: 20dvh;
+    min-height: 37dvh;
     padding: 20px;
 }
 
@@ -147,51 +158,38 @@ p {
 
 .profile__skill-list__wrapper__wrapper {
     display: flex;
+    flex-direction: column;
     position: relative; 
     width: 100%; 
     max-height: 100%;
-    height: 140dvh; 
+    min-height: 70dvh; 
     overflow: hidden; 
+    background-color: var(--color-lila-claro);
 }
 
 
 .profile__skill-list__wrapper {
-    position: absolute; 
-    top: 0;
-    left: 0;
     width: 100%; 
     height: 100%;
 }
 
-.form__slider-button{
-    position: absolute;
-    right: 0;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    height: 100%;
-    width: 4dvw;
+.form__slider-button-icon{
+    display: none !important;
 }
 
 .checkbox-hidden{
     display: none;
 }
 
-.list-1{
-    top: 0;
-    left: 0;
-}
-
-.list-2{
-    top: 0;
-    left: 1200px;
+.ul-second-list{
+    width: 100% !important;
 }
 
 /* DROP-DOWN MENU */
 
 .profile__skill-list{
     margin: 4px;
-    width: 99%;
+    width: 98%;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     justify-content: center;
@@ -200,6 +198,20 @@ p {
 
 .profile__skill{
     min-height: 220px;
+}
+
+.list-1 .profile__skill:nth-child(5){
+    display: none;
+}
+.list-1 .profile__skill:last-child{
+    display: none;
+}
+
+.list-2 .profile__skill:nth-child(5){
+    display: block;
+}
+.list-2 .profile__skill:last-child{
+    display: block;
 }
 
 .profile__skill-label{
@@ -211,7 +223,7 @@ p {
     transition: max-height .3s linear;
     background-color: inherit;
     border-radius: 3px;
-    border: 2px solid #fff;
+    border: 2px solid var(--color-blanco);
 }
 
 .profile__skill:hover h3, .profile__skill:hover img{
@@ -222,7 +234,7 @@ p {
 .titulo-wrapper{
     display: flex;
     justify-content: center;
-    background-color: #fff;
+    background-color: var(--color-blanco);
     color: var(--color-negro);
 }
 
@@ -281,7 +293,7 @@ p {
 
 .portfolio__project-container:hover{
     outline: 2px solid var(--color-gris-claro);
-    transition-duration: .3s;
+    transition-duration: .1s;
 }
 
 .portfolio__project{
@@ -349,11 +361,11 @@ p {
     min-height: 75dvh;
     display: flex;
     flex-direction: column;
-    width: 98%;
+    width: 90%;
     margin: auto;
-    background-color: #e4e6;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    gap: 30px;
 }
 
 /* -------- ONLY EXERCISES SECTION -------- */
@@ -362,31 +374,40 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     flex: 1;
-    background-color: #1e2a38;
-    color: #fff;
+    background-color: var(--color-gris-oscuro);
+    color: var(--color-blanco);
+    border-radius: 10px;
 }
 
 .exercises__image{
-    height: 200px;
-    width: 200px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
+    margin: 20px 10px;
 }
 
 .exercises__button{
     display: grid;
     align-content: center;
     justify-content: center;
-    color: #fff;
-    background-color: #48e;
+    color: var(--color-blanco);
+    background-color: var(--color-azul);
     height: 50px;
     padding: 20px;
     border-radius: 10px;
+    transition-duration: .5s;
 }
 
+.exercises__button:hover{
+    opacity: .7;
+    transition-duration: .3s;
+}
+
+
 .exercises__paragraph{
-    padding: 20px;
+    padding: 30px;
     font-size: 25px;
 }
 
@@ -397,13 +418,13 @@ p {
 
 .form {
     flex: 1;
-    background-color: var(--color-contraste);
+    background-color: var(--color-fondo);
     min-height: 60dvh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    border-radius: 10px;
 }
 
 .form__title {
@@ -443,11 +464,35 @@ p {
 }
 
 .form__input-container input[type="submit"] {
-    color: #fff;
-    background-color: var(--color-mas-oscuro);
+    color: var(--color-blanco);
+    background-color: var(--color-oscuro);
+    cursor: pointer;
+    transition-duration: .3s;
+}
+
+.form__input-container input[type="submit"]:hover {
+    opacity: .8;
+    transition-duration: .3s;
 }
 
 /* -------- FORM SECTION ENDS -------- */
+
+/* -------- FOOTER SECTION --------*/
+
+.footer{
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-oscuro);
+    color: var(--color-blanco);
+    min-height: 10dvh;
+}
+
+.footer__span{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
 
 /* -------- HEADER SECTION ANIMATIONS --------*/
 
@@ -480,6 +525,21 @@ p {
 
 /* -------- MEDIA QUERIES MAIN -------- */
 
+@media screen and (min-width:1149px){
+    .list-1 .profile__skill:nth-child(5){
+        display: block;
+    }
+    .list-1 .profile__skill:last-child{
+        display: block;
+    }
+    .list-2 .profile__skill:first-child{
+        display: none;
+    }
+    .list-2 .profile__skill:nth-child(2){
+        display: none;
+    }
+}
+
 @container profile (min-width:850px){
     .profile__wrapper{
         flex-direction: row;
@@ -489,18 +549,52 @@ p {
         flex: 2;
     }
     .profile__skills{
-        flex: 3;
+        flex: 5;
     }
 }
 
-@media screen and (min-width:525px){
+@media screen and (min-width:548px){
+    .form__slider-button-icon{
+        position: absolute;
+        top: 2px;
+        right: 0;
+        display: grid !important;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        width: 4dvw;
+        border: 2px solid var(--color-gris-claro);
+        cursor: pointer;
+        text-align: center;
+    }
     .profile__skills{
         min-height: 90dvh;
     }
-    .profile__skill-list__wrapper__wrapper {
-        height: 70dvh; 
+    input[type="checkbox"]:checked ~ .list-2{
+        top: 0;
+        left: 0;
     }
-    
+    .profile__skill-list{
+    width: 93%;
+    }
+    .profile__skill-list__wrapper {
+        position: absolute; 
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;
+        background: var(--color-lila-claro);
+    }
+    .list-1{
+        top: 0;
+        left: 0;
+    }
+
+    .list-2{
+        top: 0;
+        left: 1200px;
+        width: calc(95% - 10px);
+    }
 }
 
 /* -------- MEDIA QUERIEES PROJECT -------- */
