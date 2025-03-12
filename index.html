@@ -14,28 +14,30 @@
             <div class="self-name__wrapper">
                 <span class="header__self-name">Victor Abdias Joel Argueta Gonzalez - Desarrolador Front-End</span>
             </div>
-            <ul class="header__nav-list">
-                <li class="header__nav-item">
-                    <a href="#">
-                        <img src="imagenes portafolio/LinkedIn_icon.png" alt="imagen de red social" class="header__nav-image">
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="mailto:joelabdias2004@gmail.com">
-                        <img src="imagenes portafolio/gmail-icon.webp" alt="imagen de red social" class="header__nav-image google-icon">
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="#">
-                        <img src="imagenes portafolio/whatsapp-icon.png" alt="imagen de red social" class="header__nav-image">
-                    </a>
-                </li>
-                <li class="header__nav-item">
-                    <a href="#">
-                        <img src="imagenes portafolio/github-icon.webp" alt="imagen de red social" class="header__nav-image github-icon">
-                    </a>
-                </li>
-            </ul>
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item">
+                        <a href="#">
+                            <img src="imagenes portafolio/LinkedIn_icon.png" alt="imagen de red social" class="header__nav-image">
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="mailto:joelabdias2004@gmail.com">
+                            <img src="imagenes portafolio/gmail-icon.webp" alt="imagen de red social" class="header__nav-image google-icon">
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="#">
+                            <img src="imagenes portafolio/whatsapp-icon.png" alt="imagen de red social" class="header__nav-image">
+                        </a>
+                    </li>
+                    <li class="header__nav-item">
+                        <a href="https://github.com/joelitorepos" target="_blank">
+                            <img src="imagenes portafolio/github-icon.webp" alt="imagen de red social" class="header__nav-image github-icon">
+                        </a>
+                    </li>
+                </ul>
+            </nav>
         </header>
         <!---------- MAIN SECTION ---------->
         <main class="profile">
@@ -43,11 +45,11 @@
                 <!---------- SELF INFORMATION AND PERFIL IMAGE  ---------->
                 <div class="profile__self-information">
                     <div class="profile__img-container">
-                        <img src="imagen.png" alt="imagen de perfil">
+                        <img src="imagenes portafolio/foto-perfil.jpg" alt="imagen de perfil" class="image-profile">
                     </div>
                     <div class="profile__autodescription">
                         <h1 class="profile__autodescription-title">ACERCA DE VICTOR JOEL</h1>
-                        <p class="profile__autodescription-paragraph"><p class="profile__autodescription-paragraph">
+                        <p class="profile__autodescription-paragraph">
                             Mi nombre completo es Victor Abdias Joel Argueta Gonzalez, termine la carrera de bachillerato en computacion, soy estudiante univeritario siguiendo la carrera de ingenieria en sistemas, soy un desarrollador Front-End. Me encanta aprender nuevas tecnologías y mejorar continuamente mis habilidades. Disfruto trabajando en proyectos desafiantes que me permiten aplicar mis conocimientos en HTML, CSS, JavaScript y otras herramientas modernas de desarrollo web. Mi objetivo es no dejar de estudiar y seguir aprendiendo a programar que es lo que mas me gusta.
                         </p>
                     </div>
@@ -120,40 +122,12 @@
                                         </p>
                                     </label>
                                 </li>
-                                <li class="profile__skill">
-                                    <label for="drop-down-menu__checkbox9" class="profile__skill-label">
-                                        <img src="imagenes portafolio/github-icon.webp" alt="github logo" class="profile__img-logo">
-                                        <input class="checkbox-hidden" type="checkbox" id="drop-down-menu__checkbox9">
-                                        <div class="titulo-wrapper">
-                                            <span class="material-symbols-outlined flechas-abajo"> keyboard_double_arrow_down</span>
-                                            <h3 class="profile__skill-name">GITHUB</h3>
-                                            <span class="material-symbols-outlined flechas-abajo"> keyboard_double_arrow_down</span>
-                                        </div>
-                                        <p>
-                                            Alojo mis repositorios en GitHub, donde colaboro en proyectos y comparto mi código. Estoy familiarizado con la creación y gestión de repositorios, así como con el uso de pull requests y issues.
-                                        </p>
-                                    </label>
-                                </li>
-                                <li class="profile__skill">
-                                    <label for="drop-down-menu__checkbox10" class="profile__skill-label">
-                                        <img src="imagenes portafolio/vscode-icon.png" alt="vscode logo" class="profile__img-logo">
-                                        <input class="checkbox-hidden" type="checkbox" id="drop-down-menu__checkbox10">
-                                        <div class="titulo-wrapper">
-                                            <span class="material-symbols-outlined flechas-abajo"> keyboard_double_arrow_down</span>
-                                            <h3 class="profile__skill-name">VSCODE</h3>
-                                            <span class="material-symbols-outlined flechas-abajo"> keyboard_double_arrow_down</span>
-                                        </div>
-                                        <p>
-                                            Utilizo Visual Studio Code como mi entorno de desarrollo principal. Estoy familiarizado con sus extensiones y configuraciones, lo que me permite ser más productivo y eficiente en mi trabajo. 
-                                        </p>
-                                    </label>
-                                </li>
                             </ul>
                         </div>
                         <!----------  SLIDER BUTTON  ---------->
                         <label class="material-symbols-outlined form__slider-button-icon" for="open-menu">keyboard_double_arrow_right
+                            <input type="checkbox" id="open-menu" class="checkbox-hidden">
                         </label>
-                        <input type="checkbox" id="open-menu" class="checkbox-hidden">
                         <!---------- SECOND SKILL LIST ---------->
                         <div class="profile__skill-list__wrapper list-2">
                             <ul class="profile__skill-list ul-second-list">
@@ -286,5 +260,6 @@
         <footer class="footer">
             <span class="footer__span">Gracias por visitar mi rincón digital - Joel Argueta 2025</span>
         </footer>
+        <script src="codigo.js"></script>
     </body>
 </html>

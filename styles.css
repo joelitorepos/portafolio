@@ -42,10 +42,11 @@ p {
 /* -------- HEADER SECTION -------- */
 
 .header {
-    display: flex;
+    display: flex !important;
     justify-content: center;
+    align-items: center;
     min-height: 10dvh;
-    background-color: #333;
+    background-color: var(--color-gris-oscuro);
 }
 
 .self-name__wrapper{
@@ -58,9 +59,13 @@ p {
     color: var(--color-blanco);
 }
 
+.header__nav{
+    width: clamp(600px, 40%, 700px);
+}
+
 .header__nav-list {
     display: flex;
-    width: clamp(500px,40%,700px);
+    width: 100%;
     justify-content: space-evenly;
 }
 
@@ -99,7 +104,7 @@ p {
 .profile__wrapper{
     display: flex;
     flex-direction: column;
-    min-height: 99dvh;
+    min-height: 70dvh;
     background-color: #48e3;
     border-radius: 15px;
     overflow: hidden;
@@ -110,26 +115,45 @@ p {
 .profile__self-information{
     display: flex;
     flex-direction: column;
-    min-height: 30dvh;
     background-color: var(--color-oscuro);
     color: var(--color-gris-claro);
+    min-height: 40dvh;
+    max-height: 160dvh;
 }
 
 .profile__img-container{
     display: grid;
     justify-content: center;
     align-content: center;
+    width: 100%;
     min-height: 37dvh;
+    max-height: 37dvh;
     background-color: var(--color-negro);
+    overflow: hidden;
+}
+
+.image-profile{
+    max-height: 100%;
+    height: clamp(200px,100%,400px);
+    width: clamp(10px,100%,500px);
+    object-fit: cover;
 }
 
 .profile__autodescription{
     padding: 20px;
-    min-height: 100px;
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+    justify-content: space-evenly;
 }
 
 .profile__autodescription-title{
-    margin-bottom: 30px;
+    font-size: 1.2rem;
+}
+
+.profile__autodescription-paragraph{
+    color: var(--color-blanco);
 }
 
 
@@ -138,7 +162,6 @@ p {
 .profile__skills{
     background-color: var(--color-mas-oscuro);
     color: var(--color-mas-oscuro-solido);
-    min-height: 180dvh;
 }
 
 .profile__img-logo{
@@ -148,10 +171,21 @@ p {
 .profile__skill-description__wrapper{
     min-height: 37dvh;
     padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.profile__skill-title{
+    width: fit-content;
+    margin: auto;
 }
 
 .profile__skill-description-paragraph{
     margin-top: 25px;
+    max-width: 750px;
+    margin: auto;
 }
 
 /* -------- SKILL ICONS -------- */
@@ -161,8 +195,6 @@ p {
     flex-direction: column;
     position: relative; 
     width: 100%; 
-    max-height: 100%;
-    min-height: 70dvh; 
     overflow: hidden; 
     background-color: var(--color-lila-claro);
 }
@@ -171,6 +203,7 @@ p {
 .profile__skill-list__wrapper {
     width: 100%; 
     height: 100%;
+    min-height: 33dvh;
 }
 
 .form__slider-button-icon{
@@ -179,10 +212,6 @@ p {
 
 .checkbox-hidden{
     display: none;
-}
-
-.ul-second-list{
-    width: 100% !important;
 }
 
 /* DROP-DOWN MENU */
@@ -198,20 +227,6 @@ p {
 
 .profile__skill{
     min-height: 220px;
-}
-
-.list-1 .profile__skill:nth-child(5){
-    display: none;
-}
-.list-1 .profile__skill:last-child{
-    display: none;
-}
-
-.list-2 .profile__skill:nth-child(5){
-    display: block;
-}
-.list-2 .profile__skill:last-child{
-    display: block;
 }
 
 .profile__skill-label{
@@ -525,50 +540,29 @@ p {
 
 /* -------- MEDIA QUERIES MAIN -------- */
 
-@media screen and (min-width:1149px){
-    .list-1 .profile__skill:nth-child(5){
-        display: block;
-    }
-    .list-1 .profile__skill:last-child{
-        display: block;
-    }
-    .list-2 .profile__skill:first-child{
-        display: none;
-    }
-    .list-2 .profile__skill:nth-child(2){
-        display: none;
-    }
-}
-
 @container profile (min-width:850px){
     .profile__wrapper{
         flex-direction: row;
-        min-height: 90dvh;
+        min-height: 50dvh;
     }
     .profile__self-information{
         flex: 2;
     }
     .profile__skills{
         flex: 5;
+        min-height: 10dvh;
     }
 }
 
 @media screen and (min-width:548px){
     .form__slider-button-icon{
-        position: absolute;
-        top: 2px;
-        right: 0;
-        display: grid !important;
+        display: block !important;
         justify-content: center;
         align-content: center;
-        height: 100%;
-        width: 4dvw;
+        width: 5%;
         border: 2px solid var(--color-gris-claro);
         cursor: pointer;
         text-align: center;
-    }
-    .profile__skills{
-        min-height: 90dvh;
     }
     input[type="checkbox"]:checked ~ .list-2{
         top: 0;
@@ -576,12 +570,17 @@ p {
     }
     .profile__skill-list{
     width: 93%;
+    margin-left: auto;
+    margin-right: auto;
+    }
+    .profile__skill-list__wrapper__wrapper{
+        flex-direction: row;
     }
     .profile__skill-list__wrapper {
-        position: absolute; 
+        position: relative; 
         top: 0;
         left: 0;
-        width: 100%; 
+        width: 95%; 
         height: 100%;
         background: var(--color-lila-claro);
     }
@@ -591,9 +590,7 @@ p {
     }
 
     .list-2{
-        top: 0;
-        left: 1200px;
-        width: calc(95% - 10px);
+        display: none;
     }
 }
 
