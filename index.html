@@ -64,8 +64,8 @@
                     </div>
                     <div class="profile__skill-list__wrapper__wrapper">
                         <!---------- FIRST SKILLS LIST ---------->
-                        <div class="profile__skill-list__wrapper list-1">
-                            <ul class="profile__skill-list">
+                        <div class="profile__skill-list__wrapper list-1" id="contenedorLista1">
+                            <ul class="profile__skill-list" id="lista-1">
                                 <li class="profile__skill">
                                     <label for="drop-down-menu__checkbox1" class="profile__skill-label">
                                         <img src="imagenes portafolio/html.webp" alt="html logo" class="profile__img-logo">
@@ -124,14 +124,9 @@
                                 </li>
                             </ul>
                         </div>
-                        <!----------  SLIDER BUTTON  ---------->
-                        <label class="material-symbols-outlined form__slider-button-icon" for="open-menu">keyboard_double_arrow_right
-                            <input type="checkbox" id="open-menu" class="checkbox-hidden">
-                        </label>
-                        <!---------- SECOND SKILL LIST ---------->
-                        <div class="profile__skill-list__wrapper list-2">
-                            <ul class="profile__skill-list ul-second-list">
-                                <li class="profile__skill">
+                        <div class="profile__skill-list__wrapper list-2" id="contenedorLista2">
+                            <ul class="profile__skill-list ul-second-list" id="lista-2">
+                                <li class="profile__skill skill-github">
                                     <label for="drop-down-menu__checkbox5" class="profile__skill-label">
                                         <img src="imagenes portafolio/github-icon.webp" alt="github logo" class="profile__img-logo">
                                         <input class="checkbox-hidden" type="checkbox" id="drop-down-menu__checkbox5">
@@ -145,7 +140,7 @@
                                         </p>
                                     </label>
                                 </li>
-                                <li class="profile__skill">
+                                <li class="profile__skill skill-vscode">
                                     <label for="drop-down-menu__checkbox6" class="profile__skill-label">
                                         <img src="imagenes portafolio/vscode-icon.png" alt="vscode logo" class="profile__img-logo">
                                         <input class="checkbox-hidden" type="checkbox" id="drop-down-menu__checkbox6">
@@ -189,6 +184,11 @@
                                 </li>
                             </ul>
                         </div>
+                        <!----------  SLIDER BUTTON  ---------->
+                        <label class="material-symbols-outlined form__slider-button-icon" for="open-menu">keyboard_double_arrow_right
+                            <input type="checkbox" id="open-menu" class="checkbox-hidden">
+                        </label>
+                        <!---------- SECOND SKILL LIST ---------->
                     </div>
                 </div>
             </div>
@@ -228,34 +228,7 @@
                 <a href="https://github.com/joelitorepos" class="exercises__button" target="_blank">visita mi pagina de github</a>
                 <p class="exercises__paragraph">En mi página de GitHub, podrás encontrar una colección de ejercicios y proyectos que he realizado mientras aprendía a programar. Estos ejercicios muestran mi progreso y las habilidades que he adquirido en diversas tecnologías. ¡No dudes en echar un vistazo y explorar mi trabajo!</p>
             </section>
-            <section class="form">
-                <h2 class="form__title">CONTACTO</h2>
-                <form class="form__form">
-                <div class="form__input-container">
-                    <label class="form__label">nombre
-                        <input type="text" placeholder="ingrese nombre">
-                    </label>
-                </div>
-                <div class="form__input-container">
-                    <label class="form__label">apellido
-                        <input type="text" placeholder="ingrese apellido">
-                    </label>
-                </div>
-                <div class="form__input-container">
-                    <label class="form__label">email
-                        <input type="email" placeholder="E-mail">
-                    </label>
-                </div>
-                <div class="form__input-container">
-                    <label class="form__label">mensaje
-                        <textarea placeholder="ingrese algun mensaje"></textarea>
-                    </label>
-                </div>
-                <div class="form__input-container">
-                    <input type="submit">
-                </div>
-                </form>
-            </section>
+            
         </div>
         <footer class="footer">
             <span class="footer__span">Gracias por visitar mi rincón digital - Joel Argueta 2025</span>

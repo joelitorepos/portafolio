@@ -14,6 +14,7 @@ ul {
 }
 
 body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: var(--color-fondo-claro);
     --color-blanco: #fff;
@@ -373,10 +374,9 @@ p {
 /* -------- EXERCISES AND FORM SECTION -------- */
 
 .form-and-exercises__wrapper{
-    min-height: 75dvh;
+    min-height: 40dvh;
     display: flex;
-    flex-direction: column;
-    width: 90%;
+    width: clamp(300px,40dvw,700px);
     margin: auto;
     margin-top: 30px;
     margin-bottom: 30px;
@@ -390,7 +390,6 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex: 1;
     background-color: var(--color-gris-oscuro);
     color: var(--color-blanco);
     border-radius: 10px;
@@ -428,69 +427,6 @@ p {
 
 /* -------- EXERSICES SECTION ENDS -------- */
 
-/* -------- ONLY FORM SECTION -------- */
-
-
-.form {
-    flex: 1;
-    background-color: var(--color-fondo);
-    min-height: 60dvh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 10px;
-}
-
-.form__title {
-    font-size: 2rem;
-}
-
-.form__form {
-    padding: 13px;
-    max-width: 700px;
-    width: 100%;
-    display: grid;
-    margin-bottom: 20px;
-}
-
-.form__label {
-    display: block;
-}
-
-.form__input-container {
-    padding: 5px;
-}
-
-.form__input-container :is(input,textarea) {
-    width: 100%;
-    padding: 6px;
-    font-size: 16px;
-    border: none;
-    box-shadow: 0 0 8px #0003;
-    border-radius: 4px;
-}
-
-.form__input-container textarea {
-    resize: none;
-    min-height: 9rem;
-    font-family: inherit;
-    font-size: 1.2rem;
-}
-
-.form__input-container input[type="submit"] {
-    color: var(--color-blanco);
-    background-color: var(--color-oscuro);
-    cursor: pointer;
-    transition-duration: .3s;
-}
-
-.form__input-container input[type="submit"]:hover {
-    opacity: .8;
-    transition-duration: .3s;
-}
-
-/* -------- FORM SECTION ENDS -------- */
 
 /* -------- FOOTER SECTION --------*/
 
@@ -564,10 +500,6 @@ p {
         cursor: pointer;
         text-align: center;
     }
-    input[type="checkbox"]:checked ~ .list-2{
-        top: 0;
-        left: 0;
-    }
     .profile__skill-list{
     width: 93%;
     margin-left: auto;
@@ -591,6 +523,7 @@ p {
 
     .list-2{
         display: none;
+        min-height: 55dvh;
     }
 }
 
