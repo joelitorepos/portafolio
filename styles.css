@@ -338,43 +338,43 @@ p {
 }
 
 .project-1{
-    background-image: url(imagenes\ portafolio/portafolio-diseño.png) !important;
+    background-image: url(imagenes-portafolio/portafolio-diseño.png) !important;
     background-size: cover;
     background-position: center;
 }
 
 .project-2{
-    background-image: url(imagenes\ portafolio/aside-image.png) !important;
+    background-image: url(imagenes-portafolio/aside-image.png) !important;
     background-size: cover;
 }
 
 .project-3{
-    background-image: url(imagenes\ portafolio/chatbox-image.png) !important;
+    background-image: url(imagenes-portafolio/chatbox-image.png) !important;
     background-size: cover;
     background-position: center 30px 30;
 }
 
 .project-4{
-    background-image: url(imagenes\ portafolio/tarjeta-giratoria.png) !important;
+    background-image: url(imagenes-portafolio/tarjeta-giratoria.png) !important;
     background-size: cover;
     background-position: center;
 }
 
 .project-5{
-    background-image: url(imagenes\ portafolio/portada-web.png) !important;
+    background-image: url(imagenes-portafolio/portada-web.png) !important;
     background-size: cover;
     background-position: center;
     color: var(--color-blanco);
 }
 
 .project-6{
-    background-image: url(imagenes\ portafolio/menu-acordeon.png) !important;
+    background-image: url(imagenes-portafolio/menu-acordeon.png) !important;
     background-size: cover;
     background-position: center;
 }
 
 .project-7{
-    background-image: url(imagenes\ portafolio/botones-animados.png) !important;
+    background-image: url(imagenes-portafolio/botones-animados.png) !important;
     background-size: cover;
     background-position: center;
     color: var(--color-blanco);
@@ -537,7 +537,6 @@ p {
 
     .list-2{
         display: none;
-        min-height: 55dvh;
     }
 }
 
